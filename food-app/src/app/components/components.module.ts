@@ -5,8 +5,8 @@ import { HomeComponent } from './pages/home/home.component';
 import { RouterModule } from '@angular/router';
 
 @NgModule({
-  declarations: [HeaderComponent],
+  declarations: [HeaderComponent, HomeComponent],
   imports: [CommonModule, RouterModule],
-  exports: [HeaderComponent],
+  exports: [HeaderComponent, HomeComponent],
 })
 export class ComponentsModule {}
