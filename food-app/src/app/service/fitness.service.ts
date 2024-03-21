@@ -17,4 +17,10 @@ export class FitnessService {
       cart.name.toLocaleLowerCase().includes(searchTerm.toLocaleLowerCase())
     );
   }
+
+  getFitnessById(fitnessId: string): Cart {
+    return (
+      this.getAll().find((fitness) => fitness.id == fitnessId) ?? new Cart()
+    );
+  }
 }
