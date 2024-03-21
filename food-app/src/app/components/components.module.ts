@@ -4,10 +4,21 @@ import { HeaderComponent } from './partials/header/header.component';
 import { HomeComponent } from './pages/home/home.component';
 import { RouterModule } from '@angular/router';
 import { SearchComponent } from './partials/search/search.component';
+import { FitnessPageComponent } from './pages/fitness-page/fitness-page.component';
 
 @NgModule({
-  declarations: [HeaderComponent, HomeComponent, SearchComponent],
+  declarations: [
+    HeaderComponent,
+    HomeComponent,
+    SearchComponent,
+    FitnessPageComponent,
+  ],
   imports: [CommonModule, RouterModule],
-  exports: [HeaderComponent, HomeComponent, SearchComponent],
+  exports: [
+    HeaderComponent,
+    HomeComponent,
+    SearchComponent,
+    FitnessPageComponent,
+  ],
 })
 export class ComponentsModule {}

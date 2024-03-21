@@ -1,8 +1,6 @@
 export class Cart {
   id!: string;
   name!: string;
-  price!: number;
-  threeMonthsPrice!: number;
   pricePerYear!: number;
   favorite!: boolean;
   origins!: string[];

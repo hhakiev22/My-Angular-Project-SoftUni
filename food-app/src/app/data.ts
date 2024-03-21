@@ -4,8 +4,6 @@ export const fitness_cart: Cart[] = [
   {
     id: '1',
     name: 'Pulse',
-    price: 80,
-    threeMonthsPrice: 220,
     pricePerYear: 800,
     favorite: false,
     origins: ['Sofia', 'Varna'],
@@ -16,8 +14,6 @@ export const fitness_cart: Cart[] = [
   {
     id: '2',
     name: 'Titanium',
-    price: 60,
-    threeMonthsPrice: 165,
     pricePerYear: 600,
     favorite: true,
     origins: ['Sofia'],
@@ -28,8 +24,6 @@ export const fitness_cart: Cart[] = [
   {
     id: '3',
     name: 'Flais',
-    price: 50,
-    threeMonthsPrice: 135,
     pricePerYear: 400,
     favorite: false,
     origins: ['Sofia', 'Plovdiv'],
@@ -40,8 +34,6 @@ export const fitness_cart: Cart[] = [
   {
     id: '4',
     name: 'Next Level',
-    price: 75,
-    threeMonthsPrice: 205,
     pricePerYear: 750,
     favorite: true,
     origins: ['Sofia', 'Varna', 'Plovdiv'],

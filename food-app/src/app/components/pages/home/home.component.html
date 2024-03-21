@@ -1,6 +1,6 @@
 <ul>
   <li *ngFor="let fitnes of fitness">
-    <a routerLink="/food/{{ fitnes.id }}">
+    <a routerLink="/fitness/{{ fitnes.id }}">
       <img src="{{ fitnes.imageUrl }}" alt="" />
       <div class="content">
         <div class="name">
@@ -24,10 +24,7 @@
             </span>
           </div>
         </div>
-        <div class="price">
-          <span> Price per month: {{ fitnes.price | currency }} </span>
-        </div>
-        <div class="price-per-year">
+        <div class="price-a-year">
           <span> Price per year: {{ fitnes.pricePerYear | currency }} </span>
         </div>
       </div>

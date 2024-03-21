@@ -1,0 +1,26 @@
+<div class="container">
+  <img [src]="fitness.imageUrl" [alt]="fitness.name" />
+
+  <div class="details">
+    <div class="header">
+      <span class="name">
+        {{ fitness.name }}
+      </span>
+      <span class="favorite {{ fitness.favorite ? '' : 'not' }}"> ❤ </span>
+    </div>
+    <!-- <div class="star-rating">
+		
+	</div> -->
+
+    <div class="origins">
+      <span *ngFor="let origin of fitness.origins">
+        {{ origin }}
+      </span>
+    </div>
+
+    <div class="price-a-year">
+      Price per year: {{ fitness.pricePerYear | currency }}
+    </div>
+    <button>Add to Cart</button>
+  </div>
+</div>

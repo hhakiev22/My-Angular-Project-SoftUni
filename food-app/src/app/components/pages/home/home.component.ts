@@ -12,9 +12,9 @@ export class HomeComponent implements OnInit {
   fitness: Cart[] = [];
   constructor(
     private fitnessService: FitnessService,
-    activatedRoute: ActivatedRoute
+    private route: ActivatedRoute
   ) {
-    activatedRoute.params.subscribe((params) => {
+    this.route.params.subscribe((params) => {
       if (params.searchTerm)
         this.fitness = this.fitnessService.getAllFitnessBySearchTerm(
           params.searchTerm
