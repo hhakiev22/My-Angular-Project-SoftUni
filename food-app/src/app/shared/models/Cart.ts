@@ -1,11 +1,12 @@
-export class Food {
+export class Cart {
   id!: string;
   name!: string;
   price!: number;
-  tags?: string[];
+  threeMonthsPrice!: number;
+  pricePerYear!: number;
   favorite!: boolean;
   origins!: string[];
   stars!: number;
   imageUrl!: string;
-  cookTime!: string;
+  // tags?: string[];
 }

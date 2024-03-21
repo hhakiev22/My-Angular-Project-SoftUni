@@ -16,7 +16,7 @@ ul li a {
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  color: #e72929;
+  color: #e6a80b;
 }
 
 li a:hover {
@@ -71,5 +71,10 @@ li a:hover {
 
 .price {
   color: #414141;
+  margin-top: 0.7rem;
+}
+
+.price-per-year {
+  color: #2e2e2e;
   margin-top: 0.7rem;
 }
