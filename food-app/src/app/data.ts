@@ -1,4 +1,4 @@
-import { Trainer } from './shared/models/Trainer';
+import { TrainingType } from './shared/models/TrainingType';
 import { Fitness } from './shared/models/Fitness';
 
 export const fitness_cart: Fitness[] = [
@@ -7,46 +7,45 @@ export const fitness_cart: Fitness[] = [
     name: 'Pulse',
     pricePerYear: 800,
     favorite: false,
-    origins: ['Sofia', 'Varna'],
+    towns: ['Sofia', 'Varna'],
     stars: 4.5,
     imageUrl: 'assets/pulse.png',
-    trainers: ['MarioIvanov', 'KristinPetrova'],
+    types: ['contidion', 'running'],
   },
   {
     id: '2',
     name: 'Titanium',
     pricePerYear: 600,
     favorite: true,
-    origins: ['Sofia'],
+    towns: ['Sofia'],
     stars: 4.7,
     imageUrl: 'assets/titanium.png',
-    trainers: ['AndjelinaGeorgieva', 'SvetoslavGenov'],
+    types: ['contidion', 'functional'],
   },
   {
     id: '3',
     name: 'Flais',
     pricePerYear: 400,
     favorite: false,
-    origins: ['Sofia', 'Plovdiv'],
+    towns: ['Sofia', 'Plovdiv'],
     stars: 3.5,
     imageUrl: 'assets/flais.png',
-    trainers: ['PeterMladenov', 'IvelinDeneva'],
+    types: ['functional', 'running'],
   },
   {
     id: '4',
     name: 'Next Level',
     pricePerYear: 750,
     favorite: true,
-    origins: ['Sofia', 'Varna', 'Plovdiv'],
+    towns: ['Sofia', 'Varna', 'Plovdiv'],
     stars: 3.3,
     imageUrl: 'assets/nextLevel.jpg',
-    trainers: ['IlianPopov', 'SusanGeorgiev'],
+    types: ['functional', 'power'],
   },
 ];
 
-export const sample_trainers: Trainer[] = [
-  { name: 'Pulse', count: 584 },
-  { name: 'Titanium', count: 376 },
-  { name: 'Next Level', count: 542 },
-  { name: 'Flais', count: 436 },
+export const sample_types: TrainingType[] = [
+  { type: 'functional', members: 584 },
+  { type: 'power', members: 376 },
+  { type: 'running', members: 436 },
 ];

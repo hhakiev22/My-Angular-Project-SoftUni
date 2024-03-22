@@ -63,13 +63,13 @@ img {
   background-color: rgb(171, 211, 246);
 }
 
-.details .trainers::before {
+.details .trainings::before {
   font-size: 1.8rem;
   content: "Trainers: ";
   color: darkgrey;
 }
 
-.details .trainers > a {
+.details .trainings > a {
   padding: 0.5rem;
   font-size: 1.2rem;
   margin: 0.5rem 0.5rem 0.5rem 0;

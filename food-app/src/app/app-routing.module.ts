@@ -6,7 +6,7 @@ import { FitnessPageComponent } from './components/pages/fitness-page/fitness-pa
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'search/:searchTerm', component: HomeComponent },
-  { path: 'trainer/:trainer', component: HomeComponent },
+  { path: 'type/:type', component: HomeComponent },
   { path: 'fitness/:id', component: FitnessPageComponent },
 ];
 

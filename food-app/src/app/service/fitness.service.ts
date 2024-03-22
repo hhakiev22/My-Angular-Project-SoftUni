@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Fitness } from '../shared/models/Fitness';
-import { fitness_cart, sample_trainers } from '../data';
-import { Trainer } from '../shared/models/Trainer';
+import { fitness_cart, sample_types } from '../data';
+import { TrainingType } from '../shared/models/TrainingType';
 
 @Injectable({
   providedIn: 'root',
@@ -25,13 +25,13 @@ export class FitnessService {
     );
   }
 
-  getAllTrainers(): Trainer[] {
-    return sample_trainers;
+  getAllTrainingTypes(): TrainingType[] {
+    return sample_types;
   }
 
-  getAllFitnessTrainers(trainer: string): Fitness[] {
-    return trainer === 'All'
+  getAllFitnessTrainings(type: string): Fitness[] {
+    return type === 'All'
       ? this.getAll()
-      : this.getAll().filter((fitness) => fitness.trainers?.includes(trainer));
+      : this.getAll().filter((fitness) => fitness.types?.includes(type));
   }
 }

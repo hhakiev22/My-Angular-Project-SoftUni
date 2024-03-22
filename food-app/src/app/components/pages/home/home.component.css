@@ -50,11 +50,11 @@ li a:hover {
   align-items: center;
 }
 
-.origins {
+.towns {
   flex: 9;
 }
 
-.origins span {
+.towns span {
   border-radius: 2rem;
   background-color: whitesmoke;
   display: inline-block;

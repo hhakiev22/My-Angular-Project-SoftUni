@@ -13,17 +13,14 @@
 	</div> -->
 
     <div class="origins">
-      <span *ngFor="let origin of fitness.origins">
-        {{ origin }}
+      <span *ngFor="let town of fitness.towns">
+        {{ town }}
       </span>
     </div>
 
-    <div class="trainers">
-      <a
-        *ngFor="let trainer of fitness.trainers"
-        routerLink="/trainer/{{ trainer }}"
-      >
-        {{ trainer }}
+    <div class="trainings">
+      <a *ngFor="let type of fitness.types" routerLink="/type/{{ type }}">
+        {{ type }}
       </a>
     </div>
 

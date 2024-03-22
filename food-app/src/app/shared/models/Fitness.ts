@@ -3,8 +3,8 @@ export class Fitness {
   name!: string;
   pricePerYear!: number;
   favorite!: boolean;
-  origins!: string[];
+  towns!: string[];
   stars!: number;
   imageUrl!: string;
-  trainers!: string[];
+  types!: string[];
 }
