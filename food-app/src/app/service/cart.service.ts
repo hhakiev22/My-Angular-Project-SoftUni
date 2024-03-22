@@ -39,4 +39,8 @@ export class CartService {
     cartItem.quantity = quantity;
     cartItem.pricePerYear = quantity * cartItem.fitness.pricePerYear;
   }
+
+  clearCart() {
+    this.cart = new Cart();
+  }
 }
