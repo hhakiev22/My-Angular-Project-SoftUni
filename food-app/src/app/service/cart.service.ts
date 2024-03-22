@@ -28,4 +28,15 @@ export class CartService {
       (item) => item.fitness.id != fitnessId
     );
   }
+
+  changeQuantity(fitnessId: string, quantity: number) {
+    let cartItem = this.cart.items.find(
+      (item) => item.fitness.id === fitnessId
+    );
+
+    if (!cartItem) return;
+
+    cartItem.quantity = quantity;
+    cartItem.pricePerYear = quantity * cartItem.fitness.pricePerYear;
+  }
 }
