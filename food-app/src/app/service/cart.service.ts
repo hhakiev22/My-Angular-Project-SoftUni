@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Cart } from '../shared/models/Cart';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { Fitness } from '../shared/models/Fitness';
 import { CartItem } from '../shared/models/CartItem';
 
@@ -42,5 +42,9 @@ export class CartService {
 
   clearCart() {
     this.cart = new Cart();
+  }
+
+  getCartObservable(): Observable<Cart> {
+    return this.cartSubject.asObservable();
   }
 }
