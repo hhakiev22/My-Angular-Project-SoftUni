@@ -22,4 +22,10 @@ export class CartService {
 
     this.cart.items.push(new CartItem(fitness));
   }
+
+  removeFromCart(fitnessId: string): void {
+    this.cart.items = this.cart.items.filter(
+      (item) => item.fitness.id != fitnessId
+    );
+  }
 }
