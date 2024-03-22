@@ -23,6 +23,7 @@ import { CartPageComponent } from './pages/cart-page/cart-page.component';
     HomeComponent,
     SearchComponent,
     FitnessPageComponent,
+    CartPageComponent,
   ],
 })
 export class ComponentsModule {}
