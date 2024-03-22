@@ -5,6 +5,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { RouterModule } from '@angular/router';
 import { SearchComponent } from './partials/search/search.component';
 import { FitnessPageComponent } from './pages/fitness-page/fitness-page.component';
+import { TypesComponent } from './partials/types/types.component';
 
 @NgModule({
   declarations: [
@@ -12,6 +13,7 @@ import { FitnessPageComponent } from './pages/fitness-page/fitness-page.componen
     HomeComponent,
     SearchComponent,
     FitnessPageComponent,
+    TypesComponent,
   ],
   imports: [CommonModule, RouterModule],
   exports: [

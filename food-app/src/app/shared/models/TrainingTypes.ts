@@ -1,4 +1,4 @@
 export class TrainingType {
-  type!: string;
+  training!: string;
   members!: number;
 }

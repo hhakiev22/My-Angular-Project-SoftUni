@@ -1,4 +1,4 @@
-import { TrainingType } from './shared/models/TrainingType';
+import { TrainingType } from './shared/models/TrainingTypes';
 import { Fitness } from './shared/models/Fitness';
 
 export const fitness_cart: Fitness[] = [
@@ -10,7 +10,7 @@ export const fitness_cart: Fitness[] = [
     towns: ['Sofia', 'Varna'],
     stars: 4.5,
     imageUrl: 'assets/pulse.png',
-    types: ['contidion', 'running'],
+    types: ['Contidion', 'Running'],
   },
   {
     id: '2',
@@ -20,7 +20,7 @@ export const fitness_cart: Fitness[] = [
     towns: ['Sofia'],
     stars: 4.7,
     imageUrl: 'assets/titanium.png',
-    types: ['contidion', 'functional'],
+    types: ['Contidion', 'Functional'],
   },
   {
     id: '3',
@@ -30,7 +30,7 @@ export const fitness_cart: Fitness[] = [
     towns: ['Sofia', 'Plovdiv'],
     stars: 3.5,
     imageUrl: 'assets/flais.png',
-    types: ['functional', 'running'],
+    types: ['Functional', 'Running'],
   },
   {
     id: '4',
@@ -40,12 +40,12 @@ export const fitness_cart: Fitness[] = [
     towns: ['Sofia', 'Varna', 'Plovdiv'],
     stars: 3.3,
     imageUrl: 'assets/nextLevel.jpg',
-    types: ['functional', 'power'],
+    types: ['Functional', 'Power'],
   },
 ];
 
 export const sample_types: TrainingType[] = [
-  { type: 'functional', members: 584 },
-  { type: 'power', members: 376 },
-  { type: 'running', members: 436 },
+  { training: 'Functional', members: 584 },
+  { training: 'Power', members: 376 },
+  { training: 'Running', members: 436 },
 ];

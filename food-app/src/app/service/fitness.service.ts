@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Fitness } from '../shared/models/Fitness';
 import { fitness_cart, sample_types } from '../data';
-import { TrainingType } from '../shared/models/TrainingType';
+import { TrainingType } from '../shared/models/TrainingTypes';
 
 @Injectable({
   providedIn: 'root',
