@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 import { SearchComponent } from './partials/search/search.component';
 import { FitnessPageComponent } from './pages/fitness-page/fitness-page.component';
 import { TypesComponent } from './partials/types/types.component';
+import { CartPageComponent } from './pages/cart-page/cart-page.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { TypesComponent } from './partials/types/types.component';
     SearchComponent,
     FitnessPageComponent,
     TypesComponent,
+    CartPageComponent,
   ],
   imports: [CommonModule, RouterModule],
   exports: [
