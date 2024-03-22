@@ -47,4 +47,19 @@ export class CartService {
   getCartObservable(): Observable<Cart> {
     return this.cartSubject.asObservable();
   }
+
+  private setCartToLocalStorage(): void {
+    this.cart.totalPrice = this.cart.items.reduce(
+      (prevSum, currSum) => prevSum + currSum.pricePerYear,
+      0
+    );
+    this.cart.totalCount = this.cart.items.reduce(
+      (prevSum, currSum) => prevSum + currSum.quantity,
+      0
+    );
+
+    const cartJson = JSON.stringify(this.cart);
+    localStorage.setItem('Cart', cartJson);
+    this.cartSubject.next(this.cart); // next value of the cart after changes
+  }
 }
