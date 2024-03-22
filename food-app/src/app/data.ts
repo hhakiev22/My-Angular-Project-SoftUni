@@ -1,4 +1,4 @@
-import { Trainers } from './shared/models/Trainers';
+import { Trainer } from './shared/models/Trainer';
 import { Fitness } from './shared/models/Fitness';
 
 export const fitness_cart: Fitness[] = [
@@ -44,7 +44,7 @@ export const fitness_cart: Fitness[] = [
   },
 ];
 
-export const sample_trainers: Trainers[] = [
+export const sample_trainers: Trainer[] = [
   { name: 'Pulse', count: 584 },
   { name: 'Titanium', count: 376 },
   { name: 'Next Level', count: 542 },
