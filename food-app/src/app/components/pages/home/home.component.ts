@@ -19,6 +19,10 @@ export class HomeComponent implements OnInit {
         this.fitness = this.fitnessService.getAllFitnessBySearchTerm(
           params.searchTerm
         );
+      else if (params.trainer)
+        this.fitness = this.fitnessService.getAllFitnessTrainers(
+          params.trainer
+        );
       else this.fitness = fitnessService.getAll();
     });
   }

@@ -10,7 +10,7 @@ export const fitness_cart: Fitness[] = [
     origins: ['Sofia', 'Varna'],
     stars: 4.5,
     imageUrl: 'assets/pulse.png',
-    trainers: ['Mario Ivanov', 'Kristin Petrova'],
+    trainers: ['MarioIvanov', 'KristinPetrova'],
   },
   {
     id: '2',
@@ -20,7 +20,7 @@ export const fitness_cart: Fitness[] = [
     origins: ['Sofia'],
     stars: 4.7,
     imageUrl: 'assets/titanium.png',
-    trainers: ['Andjelina Georgieva', 'Svetoslav Genov'],
+    trainers: ['AndjelinaGeorgieva', 'SvetoslavGenov'],
   },
   {
     id: '3',
@@ -30,7 +30,7 @@ export const fitness_cart: Fitness[] = [
     origins: ['Sofia', 'Plovdiv'],
     stars: 3.5,
     imageUrl: 'assets/flais.png',
-    trainers: ['Peter Mladenov', 'Ivelin Deneva'],
+    trainers: ['PeterMladenov', 'IvelinDeneva'],
   },
   {
     id: '4',
@@ -40,7 +40,7 @@ export const fitness_cart: Fitness[] = [
     origins: ['Sofia', 'Varna', 'Plovdiv'],
     stars: 3.3,
     imageUrl: 'assets/nextLevel.jpg',
-    trainers: ['Ilian Popov', 'Susan Georgiev'],
+    trainers: ['IlianPopov', 'SusanGeorgiev'],
   },
 ];
 
