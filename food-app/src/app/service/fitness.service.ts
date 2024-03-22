@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Cart } from '../shared/models/Cart';
+import { Fitness } from '../shared/models/Fitness';
 import { fitness_cart } from '../data';
 
 @Injectable({
@@ -8,19 +8,19 @@ import { fitness_cart } from '../data';
 export class FitnessService {
   constructor() {}
 
-  getAll(): Cart[] {
+  getAll(): Fitness[] {
     return fitness_cart;
   }
 
   getAllFitnessBySearchTerm(searchTerm: string) {
-    return this.getAll().filter((cart) =>
-      cart.name.toLocaleLowerCase().includes(searchTerm.toLocaleLowerCase())
+    return this.getAll().filter((fitness) =>
+      fitness.name.toLocaleLowerCase().includes(searchTerm.toLocaleLowerCase())
     );
   }
 
-  getFitnessById(fitnessId: string): Cart {
+  getFitnessById(fitnessId: string): Fitness {
     return (
-      this.getAll().find((fitness) => fitness.id == fitnessId) ?? new Cart()
+      this.getAll().find((fitness) => fitness.id == fitnessId) ?? new Fitness()
     );
   }
 }

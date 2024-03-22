@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Cart } from '../../../shared/models/Cart';
+import { Fitness } from '../../../shared/models/Fitness';
 import { FitnessService } from '../../../service/fitness.service';
 import { ActivatedRoute } from '@angular/router';
 
@@ -9,7 +9,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
-  fitness: Cart[] = [];
+  fitness: Fitness[] = [];
   constructor(
     private fitnessService: FitnessService,
     private route: ActivatedRoute

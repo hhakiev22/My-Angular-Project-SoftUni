@@ -1,6 +1,7 @@
 import { Cart } from './shared/models/Cart';
+import { Fitness } from './shared/models/Fitness';
 
-export const fitness_cart: Cart[] = [
+export const fitness_cart: Fitness[] = [
   {
     id: '1',
     name: 'Pulse',
@@ -41,4 +42,11 @@ export const fitness_cart: Cart[] = [
     imageUrl: 'assets/nextLevel.jpg',
     // tags: ['FastFood', 'Fry'],
   },
+];
+
+const sample_cart: Cart[] = [
+  { name: 'Pulse', count: 584 },
+  { name: 'Titanium', count: 376 },
+  { name: 'Next Level', count: 542 },
+  { name: 'Flais', count: 436 },
 ];

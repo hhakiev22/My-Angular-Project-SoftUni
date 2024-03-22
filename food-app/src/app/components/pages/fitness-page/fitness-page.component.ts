@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { FitnessService } from 'src/app/service/fitness.service';
-import { Cart } from 'src/app/shared/models/Cart';
+import { Fitness } from 'src/app/shared/models/Fitness';
 
 @Component({
   selector: 'app-fitness-page',
@@ -9,7 +9,7 @@ import { Cart } from 'src/app/shared/models/Cart';
   styleUrls: ['./fitness-page.component.css'],
 })
 export class FitnessPageComponent {
-  fitness!: Cart;
+  fitness!: Fitness;
 
   constructor(activatedRoute: ActivatedRoute, fitnessService: FitnessService) {
     activatedRoute.params.subscribe((params) => {
