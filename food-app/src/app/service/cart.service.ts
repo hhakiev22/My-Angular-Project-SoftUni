@@ -8,7 +8,7 @@ import { CartItem } from '../shared/models/CartItem';
   providedIn: 'root',
 })
 export class CartService {
-  private cart: Cart = new Cart();
+  private cart: Cart = this.getCartFromLocalStorage();
   private cartSubject: BehaviorSubject<Cart> = new BehaviorSubject(this.cart);
   constructor() {}
 
@@ -17,16 +17,17 @@ export class CartService {
       (item) => item.fitness.id == fitness.id
     );
     // we search for the item to add to the cart
-
     if (cartItem) return;
 
     this.cart.items.push(new CartItem(fitness));
+    this.setCartToLocalStorage();
   }
 
   removeFromCart(fitnessId: string): void {
     this.cart.items = this.cart.items.filter(
       (item) => item.fitness.id != fitnessId
     );
+    this.setCartToLocalStorage();
   }
 
   changeQuantity(fitnessId: string, quantity: number) {
@@ -38,10 +39,12 @@ export class CartService {
 
     cartItem.quantity = quantity;
     cartItem.pricePerYear = quantity * cartItem.fitness.pricePerYear;
+    this.setCartToLocalStorage();
   }
 
   clearCart() {
     this.cart = new Cart();
+    this.setCartToLocalStorage();
   }
 
   getCartObservable(): Observable<Cart> {
@@ -61,5 +64,10 @@ export class CartService {
     const cartJson = JSON.stringify(this.cart);
     localStorage.setItem('Cart', cartJson);
     this.cartSubject.next(this.cart); // next value of the cart after changes
+  }
+
+  private getCartFromLocalStorage(): Cart {
+    const cartJson = localStorage.getItem('Cart');
+    return cartJson ? JSON.parse(cartJson) : new Cart();
   }
 }
