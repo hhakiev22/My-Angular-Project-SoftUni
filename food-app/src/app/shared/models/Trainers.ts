@@ -1,4 +1,4 @@
-export class Cart {
+export class Trainers {
   name!: string;
   count!: number;
 }

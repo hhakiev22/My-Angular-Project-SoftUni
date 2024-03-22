@@ -6,5 +6,5 @@ export class Fitness {
   origins!: string[];
   stars!: number;
   imageUrl!: string;
-  // tags?: string[];
+  trainers!: string[];
 }

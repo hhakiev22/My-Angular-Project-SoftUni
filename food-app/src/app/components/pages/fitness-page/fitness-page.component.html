@@ -18,6 +18,15 @@
       </span>
     </div>
 
+    <div class="trainers">
+      <a
+        *ngFor="let trainer of fitness.trainers"
+        routerLink="/trainer/{{ trainer }}"
+      >
+        {{ trainer }}
+      </a>
+    </div>
+
     <div class="price">
       {{ fitness.pricePerYear | currency }}
     </div>

@@ -1,4 +1,4 @@
-import { Cart } from './shared/models/Cart';
+import { Trainers } from './shared/models/Trainers';
 import { Fitness } from './shared/models/Fitness';
 
 export const fitness_cart: Fitness[] = [
@@ -10,7 +10,7 @@ export const fitness_cart: Fitness[] = [
     origins: ['Sofia', 'Varna'],
     stars: 4.5,
     imageUrl: 'assets/pulse.png',
-    // tags: ['FastFood', 'Pizza', 'Lunch'],
+    trainers: ['Mario Ivanov', 'Kristin Petrova'],
   },
   {
     id: '2',
@@ -20,7 +20,7 @@ export const fitness_cart: Fitness[] = [
     origins: ['Sofia'],
     stars: 4.7,
     imageUrl: 'assets/titanium.png',
-    // tags: ['SlowFood', 'Lunch'],
+    trainers: ['Andjelina Georgieva', 'Svetoslav Genov'],
   },
   {
     id: '3',
@@ -30,7 +30,7 @@ export const fitness_cart: Fitness[] = [
     origins: ['Sofia', 'Plovdiv'],
     stars: 3.5,
     imageUrl: 'assets/flais.png',
-    // tags: ['FastFood', 'Hamburger'],
+    trainers: ['Peter Mladenov', 'Ivelin Deneva'],
   },
   {
     id: '4',
@@ -40,11 +40,11 @@ export const fitness_cart: Fitness[] = [
     origins: ['Sofia', 'Varna', 'Plovdiv'],
     stars: 3.3,
     imageUrl: 'assets/nextLevel.jpg',
-    // tags: ['FastFood', 'Fry'],
+    trainers: ['Ilian Popov', 'Susan Georgiev'],
   },
 ];
 
-const sample_cart: Cart[] = [
+export const sample_trainers: Trainers[] = [
   { name: 'Pulse', count: 584 },
   { name: 'Titanium', count: 376 },
   { name: 'Next Level', count: 542 },
