@@ -8,6 +8,7 @@ import { FitnessPageComponent } from './pages/fitness-page/fitness-page.componen
 import { TypesComponent } from './partials/types/types.component';
 import { CartPageComponent } from './pages/cart-page/cart-page.component';
 import { TitleComponent } from './partials/title/title.component';
+import { NotFoundComponent } from './partials/not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { TitleComponent } from './partials/title/title.component';
     TypesComponent,
     CartPageComponent,
     TitleComponent,
+    NotFoundComponent,
   ],
   imports: [CommonModule, RouterModule],
   exports: [
