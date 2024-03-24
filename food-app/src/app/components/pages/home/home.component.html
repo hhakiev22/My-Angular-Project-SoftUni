@@ -1,5 +1,9 @@
 <app-search></app-search>
 <app-types></app-types>
+<app-not-found
+  [visible]="!fitness || !fitness.length"
+  resetLinkText="Reset Search"
+></app-not-found>
 <ul>
   <li *ngFor="let fitnes of fitness">
     <a routerLink="/fitness/{{ fitnes.id }}">
