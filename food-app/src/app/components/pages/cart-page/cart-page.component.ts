@@ -22,4 +22,9 @@ export class CartPageComponent implements OnInit {
   removeFromCart(cartItem: CartItem) {
     this.cartService.removeFromCart(cartItem.fitness.id);
   }
+
+  changeQuantity(cartItem: CartItem, quantityInString: string) {
+    const quantity = parseInt(quantityInString);
+    this.cartService.changeQuantity(cartItem.fitness.id, quantity);
+  }
 }
