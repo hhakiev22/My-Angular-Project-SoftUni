@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CartService } from 'src/app/service/cart.service';
 import { Cart } from 'src/app/shared/models/Cart';
+import { CartItem } from 'src/app/shared/models/CartItem';
 
 @Component({
   selector: 'app-cart-page',
@@ -17,4 +18,8 @@ export class CartPageComponent implements OnInit {
   }
 
   ngOnInit(): void {}
+
+  removeFromCart(cartItem: CartItem) {
+    this.cartService.removeFromCart(cartItem.fitness.id);
+  }
 }
