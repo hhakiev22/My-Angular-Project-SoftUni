@@ -1,4 +1,9 @@
-<div class="container">
+<app-not-found
+  [visible]="!fitness.id"
+  noFoundMessage="Item Not Found"
+  resetLinkText="Back To HOME"
+></app-not-found>
+<div *ngIf="fitness.id" class="container">
   <img [src]="fitness.imageUrl" [alt]="fitness.name" />
 
   <div class="details">
