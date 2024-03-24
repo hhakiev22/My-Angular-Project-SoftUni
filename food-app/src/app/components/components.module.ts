@@ -28,6 +28,7 @@ import { NotFoundComponent } from './partials/not-found/not-found.component';
     SearchComponent,
     FitnessPageComponent,
     CartPageComponent,
+    NotFoundComponent,
   ],
 })
 export class ComponentsModule {}
