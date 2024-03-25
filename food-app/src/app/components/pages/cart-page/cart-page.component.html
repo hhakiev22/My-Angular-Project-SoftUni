@@ -11,11 +11,11 @@
   <ul>
     <li *ngFor="let cartItem of cart.items">
       <div>
-        <img [src]="cartItem.fitness.imageUrl" [alt]="cartItem.fitness.name" />
+        <img [src]="cartItem.food.imageUrl" [alt]="cartItem.food.name" />
       </div>
       <div>
-        <a routerLink="/fitness/{{ cartItem.fitness.id }}">
-          {{ cartItem.fitness.name }}
+        <a routerLink="/food/{{ cartItem.food.id }}">
+          {{ cartItem.food.name }}
         </a>
       </div>
       <div>
@@ -32,7 +32,7 @@
         </select>
       </div>
       <div>
-        {{ cartItem.pricePerYear | currency }}
+        {{ cartItem.price | currency }}
       </div>
       <div>
         <button class="remove-button" (click)="removeFromCart(cartItem)">

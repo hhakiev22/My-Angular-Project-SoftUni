@@ -15,7 +15,7 @@ img {
   border-radius: 3rem;
   flex: 1 0;
   object-fit: cover;
-  /* height: 35rem; */
+  height: 35rem;
   margin: 1rem;
 }
 
@@ -60,22 +60,17 @@ img {
   font-size: 1.2rem;
   margin: 0.5rem 0.5rem 0.5rem 0;
   border-radius: 2rem;
-  background-color: rgb(171, 211, 246);
+  background-color: aliceblue;
 }
 
-.details .trainings::before {
-  font-size: 1.8rem;
-  content: "Trainers: ";
-  color: darkgrey;
+.details .cook-time {
+  margin-top: 1rem;
 }
 
-.details .trainings > a {
-  padding: 0.5rem;
-  font-size: 1.2rem;
-  margin: 0.5rem 0.5rem 0.5rem 0;
-  border-radius: 2rem;
-  background-color: rgb(93, 182, 246);
-  color: black;
+.details .cook-time span {
+  padding: 0.6rem 2rem 0.6rem 0;
+  border-radius: 10rem;
+  font-size: 1.3rem;
 }
 
 .details .price {

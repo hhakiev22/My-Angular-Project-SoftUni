@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Fitness } from '../../../shared/models/Fitness';
-import { FitnessService } from '../../../service/fitness.service';
+import { HealthyFood } from '../../../shared/models/Food';
+import { FoodService } from '../../../service/food.service';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -9,19 +9,19 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
-  fitness: Fitness[] = [];
+  foods: HealthyFood[] = [];
   constructor(
-    private fitnessService: FitnessService,
-    private route: ActivatedRoute
+    private foodService: FoodService,
+    activatedRoute: ActivatedRoute
   ) {
-    this.route.params.subscribe((params) => {
+    activatedRoute.params.subscribe((params) => {
       if (params.searchTerm)
-        this.fitness = this.fitnessService.getAllFitnessBySearchTerm(
+        this.foods = this.foodService.getAllFoodsBySearchTerm(
           params.searchTerm
         );
-      else if (params.type)
-        this.fitness = this.fitnessService.getAllFitnessTrainings(params.type);
-      else this.fitness = fitnessService.getAll();
+      else if (params.tag)
+        this.foods = this.foodService.getAllFoodsByTag(params.tag);
+      else this.foods = foodService.getAll();
     });
   }
 

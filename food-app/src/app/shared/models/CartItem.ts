@@ -1,7 +1,7 @@
-import { Fitness } from './Fitness';
+import { HealthyFood } from './Food';
 
 export class CartItem {
-  constructor(public fitness: Fitness) {} // inject fitness
+  constructor(public food: HealthyFood) {} // inject HealthyFood
   quantity: number = 1;
-  pricePerYear: number = this.fitness.pricePerYear;
+  price: number = this.food.price;
 }

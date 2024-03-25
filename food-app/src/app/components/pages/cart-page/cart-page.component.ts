@@ -12,6 +12,7 @@ export class CartPageComponent implements OnInit {
   cart!: Cart; // to hold cart data
 
   constructor(private cartService: CartService) {
+    // update each time there's a new cart
     this.cartService.getCartObservable().subscribe((cart) => {
       this.cart = cart;
     });
@@ -20,11 +21,11 @@ export class CartPageComponent implements OnInit {
   ngOnInit(): void {}
 
   removeFromCart(cartItem: CartItem) {
-    this.cartService.removeFromCart(cartItem.fitness.id);
+    this.cartService.removeFromCart(cartItem.food.id);
   }
 
   changeQuantity(cartItem: CartItem, quantityInString: string) {
     const quantity = parseInt(quantityInString);
-    this.cartService.changeQuantity(cartItem.fitness.id, quantity);
+    this.cartService.changeQuantity(cartItem.food.id, quantity);
   }
 }

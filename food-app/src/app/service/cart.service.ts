@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Cart } from '../shared/models/Cart';
 import { BehaviorSubject, Observable } from 'rxjs';
-import { Fitness } from '../shared/models/Fitness';
+import { HealthyFood } from '../shared/models/Food';
 import { CartItem } from '../shared/models/CartItem';
 
 @Injectable({
@@ -12,33 +12,27 @@ export class CartService {
   private cartSubject: BehaviorSubject<Cart> = new BehaviorSubject(this.cart);
   constructor() {}
 
-  addToCart(fitness: Fitness): void {
-    let cartItem = this.cart.items.find(
-      (item) => item.fitness.id == fitness.id
-    );
+  addToCart(food: HealthyFood): void {
+    let cartItem = this.cart.items.find((item) => item.food.id == food.id);
     // we search for the item to add to the cart
     if (cartItem) return;
 
-    this.cart.items.push(new CartItem(fitness));
+    this.cart.items.push(new CartItem(food));
     this.setCartToLocalStorage();
   }
 
-  removeFromCart(fitnessId: string): void {
-    this.cart.items = this.cart.items.filter(
-      (item) => item.fitness.id != fitnessId
-    );
+  removeFromCart(foodId: string): void {
+    this.cart.items = this.cart.items.filter((item) => item.food.id != foodId);
     this.setCartToLocalStorage();
   }
 
-  changeQuantity(fitnessId: string, quantity: number) {
-    let cartItem = this.cart.items.find(
-      (item) => item.fitness.id === fitnessId
-    );
+  changeQuantity(foodId: string, quantity: number) {
+    let cartItem = this.cart.items.find((item) => item.food.id === foodId);
 
     if (!cartItem) return;
 
     cartItem.quantity = quantity;
-    cartItem.pricePerYear = quantity * cartItem.fitness.pricePerYear;
+    cartItem.price = quantity * cartItem.food.price;
     this.setCartToLocalStorage();
   }
 
@@ -53,7 +47,7 @@ export class CartService {
 
   private setCartToLocalStorage(): void {
     this.cart.totalPrice = this.cart.items.reduce(
-      (prevSum, currSum) => prevSum + currSum.pricePerYear,
+      (prevSum, currSum) => prevSum + currSum.price,
       0
     );
     this.cart.totalCount = this.cart.items.reduce(
