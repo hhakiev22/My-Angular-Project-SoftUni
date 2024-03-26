@@ -10,6 +10,7 @@ import { NotFoundComponent } from './partials/not-found/not-found.component';
 import { FoodPageComponent } from './pages/food-page/food-page.component';
 import { TagsComponent } from './partials/tags/tags.component';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,7 @@ import { LoginPageComponent } from './pages/login-page/login-page.component';
     TagsComponent,
     LoginPageComponent,
   ],
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, ReactiveFormsModule],
   exports: [
     HeaderComponent,
     HomeComponent,
