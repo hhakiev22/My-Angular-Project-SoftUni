@@ -9,6 +9,7 @@ import { TitleComponent } from './partials/title/title.component';
 import { NotFoundComponent } from './partials/not-found/not-found.component';
 import { FoodPageComponent } from './pages/food-page/food-page.component';
 import { TagsComponent } from './partials/tags/tags.component';
+import { LoginPageComponent } from './pages/login-page/login-page.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { TagsComponent } from './partials/tags/tags.component';
     TitleComponent,
     NotFoundComponent,
     TagsComponent,
+    LoginPageComponent,
   ],
   imports: [CommonModule, RouterModule],
   exports: [
@@ -31,6 +33,7 @@ import { TagsComponent } from './partials/tags/tags.component';
     NotFoundComponent,
     TagsComponent,
     TitleComponent,
+    LoginPageComponent,
   ],
 })
 export class ComponentsModule {}
