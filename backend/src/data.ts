@@ -1,4 +1,4 @@
-export const fitness_cart: any[] = [
+export const sample_foods: any[] = [
   {
     id: "1",
     name: "Pulse",
@@ -41,7 +41,7 @@ export const fitness_cart: any[] = [
   },
 ];
 
-export const sample_types: any[] = [
+export const sample_tags: any[] = [
   { training: "Functional", members: 584 },
   { training: "Power", members: 376 },
   { training: "Running", members: 436 },

@@ -1,6 +1,6 @@
 import express from "express";
 import cors from "cors";
-import { fitness_cart, sample_types } from "./data";
+import { sample_foods, sample_tags } from "./data";
 
 const app = express(); // we are gonna define with app our API's
 app.use(
@@ -10,36 +10,34 @@ app.use(
   })
 );
 
-app.get("/api/fitness/", (req, res) => {
-  res.send(fitness_cart);
+app.get("/api/foods/", (req, res) => {
+  res.send(sample_foods);
 });
 
-app.get("/api/fitness/search/:searchTerm", (req, res) => {
+app.get("/api/foods/search/:searchTerm", (req, res) => {
   const searchTerm = req.params.searchTerm;
-  const fitnessItems = fitness_cart.filter((fitness) =>
-    fitness.name.toLocaleLowerCase().includes(searchTerm.toLocaleLowerCase())
+  const foods = sample_foods.filter((food) =>
+    food.name.toLocaleLowerCase().includes(searchTerm.toLocaleLowerCase())
   );
 
-  res.send(fitnessItems);
+  res.send(foods);
 });
 
-app.get("/api/fitness/types", (req, res) => {
-  res.send(sample_types);
+app.get("/api/foods/tags", (req, res) => {
+  res.send(sample_tags);
 });
 
-app.get("/api/fitness/type/:typeName", (req, res) => {
-  const typeName = req.params.typeName;
-  const fitnessItem = fitness_cart.filter((fitness) =>
-    fitness.type?.includes(typeName)
-  );
+app.get("/api/foods/tag/:tagName", (req, res) => {
+  const tagName = req.params.tagName;
+  const foods = sample_foods.filter((food) => food.tags?.includes(tagName));
 
-  res.send(fitnessItem);
+  res.send(foods);
 });
 
-app.get("/api/fitness/:fitnessId", (req, res) => {
-  const fitnessId = req.params.fitnessId;
-  const fitness = fitness_cart.find((fitness) => fitness.id == fitnessId);
-  res.send(fitness);
+app.get("/api/fitness/:foodId", (req, res) => {
+  const foodId = req.params.foodId;
+  const food = sample_foods.find((food) => food.id == foodId);
+  res.send(food);
 });
 
 const port = 5000;
