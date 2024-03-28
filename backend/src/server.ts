@@ -12,14 +12,14 @@ app.use(
   })
 );
 
-app.get("/api/foods/", (req, res) => {
+app.get("/api/foods", (req, res) => {
   res.send(sample_foods);
 });
 
 app.get("/api/foods/search/:searchTerm", (req, res) => {
   const searchTerm = req.params.searchTerm;
   const foods = sample_foods.filter((food) =>
-    food.name.toLocaleLowerCase().includes(searchTerm.toLocaleLowerCase())
+    food.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   res.send(foods);
@@ -36,7 +36,7 @@ app.get("/api/foods/tag/:tagName", (req, res) => {
   res.send(foods);
 });
 
-app.get("/api/fitness/:foodId", (req, res) => {
+app.get("/api/foods/:foodId", (req, res) => {
   const foodId = req.params.foodId;
   const food = sample_foods.find((food) => food.id == foodId);
   res.send(food);
