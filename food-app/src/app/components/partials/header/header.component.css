@@ -2,15 +2,15 @@ header {
   position: relative;
   background: white;
   padding: 0;
-  border-bottom: 1px solid #e72929;
+  border-bottom: 1px solid #4929e7;
 }
 
 a {
-  color: #af1313;
+  color: #180291;
 }
 
 a:hover {
-  background: #e72929;
+  background: #4929e7;
   color: white;
   cursor: pointer;
 }
