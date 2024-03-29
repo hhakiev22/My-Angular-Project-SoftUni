@@ -1,9 +1,10 @@
-import { NgModule } from '@angular/core';
+import { NgModule, OnInit } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/pages/home/home.component';
 import { FoodPageComponent } from './components/pages/food-page/food-page.component';
 import { CartPageComponent } from './components/pages/cart-page/cart-page.component';
 import { LoginPageComponent } from './components/pages/login-page/login-page.component';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -18,4 +19,28 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule implements OnInit {
+  loginForm!: FormGroup;
+  isSubmitted = false;
+
+  constructor(private formBuilder: FormBuilder) {}
+
+  ngOnInit(): void {
+    this.loginForm = this.formBuilder.group({
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', Validators.required],
+    });
+  }
+
+  get fc() {
+    return this.loginForm.controls;
+  }
+
+  submit() {
+    this.isSubmitted = true;
+    if (this.loginForm.invalid) return;
+
+    alert(`email: ${this.fc.email.value},
+     password: ${this.fc.password.value}`);
+  }
+}
