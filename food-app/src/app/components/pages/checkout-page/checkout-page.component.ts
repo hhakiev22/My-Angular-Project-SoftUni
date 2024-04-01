@@ -35,4 +35,16 @@ export class CheckoutPageComponent implements OnInit {
   get fc() {
     return this.checkoutForm.controls;
   }
+
+  createOrder() {
+    if (this.checkoutForm.invalid) {
+      this.toastrService.warning('Please fill the inputs', 'Invalid Inputs');
+      return;
+    }
+
+    this.order.name = this.fc.name.value;
+    this.order.address = this.fc.address.value;
+
+    console.log(this.order);
+  }
 }
