@@ -28,3 +28,5 @@ router.post(
     res.send(newOrder);
   })
 );
+
+export default router;
