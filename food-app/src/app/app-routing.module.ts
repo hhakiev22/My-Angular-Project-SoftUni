@@ -7,8 +7,8 @@ import { LoginPageComponent } from './components/pages/login-page/login-page.com
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { RegisterPageComponent } from './components/pages/register-page/register-page.component';
 import { CheckoutPageComponent } from './components/pages/checkout-page/checkout-page.component';
-import { AuthGuard } from './auth/guards/auth.guard';
 import { PaymentPageComponent } from './components/pages/payment-page/payment-page.component';
+import { canActivate } from './auth/guards/auth.guard';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -21,12 +21,11 @@ const routes: Routes = [
   {
     path: 'checkout',
     component: CheckoutPageComponent,
-    canActivate: [AuthGuard],
+    canActivate: [canActivate],
   },
   {
     path: 'payment',
     component: PaymentPageComponent,
-    canActivate: [AuthGuard],
   },
 ];
 
